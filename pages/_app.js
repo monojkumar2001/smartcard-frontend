@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "../styles/App.css";
 import "../styles/Layout.css";
+import '../styles/dashboard.css';
 import "../styles/section/_global-style.scss";
 import Social from "./inner/Social";
 import OfferC from "./inner/OfferC";
@@ -9,6 +10,7 @@ import "aos/dist/aos.css";
 import "../styles/section/portfolio.css";
 import "../styles/inner/popup.css";
 import { useEffect } from "react";
+
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -28,8 +30,9 @@ function MyApp({ Component, pageProps }) {
 
         <Component {...pageProps} />
 
-        <Social />
+        {/* <Social /> */}
       </Layout>
+    
    
     </>
   );

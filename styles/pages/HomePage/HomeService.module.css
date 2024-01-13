@@ -61,12 +61,12 @@
   .service_icon {
     display: flex;
     background: rgba(108, 84, 234, 0.1215686275);
-    padding: 10px;
-    border-radius: 50%;
-    width: 70px;
+    padding: 15px;
+    border-radius: 100%;
+    width: 100px;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: 100px;
   }
 
 

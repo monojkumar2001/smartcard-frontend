@@ -7,7 +7,7 @@ const HeroSection = () => {
     <>
       <section id={Styles.hero_about}>
         <div className="container">
-          <div className={Styles.hero}>
+          <div className={Styles.about_wrapper}>
             <div
               className={Styles.hero_content}
               data-aos="fade-up"
@@ -27,34 +27,23 @@ const HeroSection = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div
+            <div
               className={Styles.hero_img2}
               data-aos="fade-up"
               data-aos-duration="2000"
             >
               <Image
-                width={576}
-                height={425}
+                width={541}
+                height={531}
                 loading="lazy"
-                src="/assets/images/about/hero-bg-img-2.svg"
+                src="/assets/images/home/about.svg"
                 alt="about"
               />
             </div>
-        <div
-              className={Styles.hero_img3}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              <Image
-                width={1400}
-                height={310}
-                loading="lazy"
-                src="/assets/images/about/hero-bg-img-3.svg"
-                alt="about"
-              />
-            </div>
+          </div>
+        </div>
+      
+      
       </section>
 
     </>

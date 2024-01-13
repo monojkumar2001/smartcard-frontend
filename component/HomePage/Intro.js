@@ -16,12 +16,10 @@ const Intro = () => {
             >
               <div className={styles.hero_content}>
                 <h1 className={styles.section_title}>
-                  Full Stack Web Tech Services For NFT & Fint ech Companies
+                  Bring your concepts for QR Codes to life.
                 </h1>
                 <p>
-                  We provide full stack web tech development and design services
-                  for NFT Defi and fintech start ups that can help you to reach
-                  a wider audience and increase of revenue.
+                  QR codes revolutionize interaction, from interactive marketing and contactless transactions to healthcare solutions. They streamline processes, enhance experiences, and offer efficiency across various applications.
                 </p>
                 <div className="custom-btn mt-3">
                   <Link href={'/login'} >
@@ -39,7 +37,7 @@ const Intro = () => {
                 width={469}
                 height={534}
                 loading="lazy"
-                src="/assets/new/hero/hero.svg"
+                src="/assets/images/home/hero.svg"
                 alt=""
               />
             </div>

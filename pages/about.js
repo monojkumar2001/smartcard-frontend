@@ -4,11 +4,7 @@ import Featured from "../component/Section/Featured";
 import WhyChose from "../component/Section/WhyChose";
 import ContactBtn from "../component/Section/ContactBtn";
 import HeroSection from "../component/AboutPage/HeroSection";
-// import ServiceCardItem from "../component/Section/ServiceCardItem";
-// import { AboutServiceData } from "/Data/ServiceData/ServiceData";
-import SolvingProblem from "../component/AboutPage/SolvingProblem";
 import SaveTime from "../component/Section/SaveTime";
-
 function About() {
   return (
     <>
@@ -61,25 +57,10 @@ function About() {
       {/* =============service card section ================== */}
       <SaveTime />
       {/* =============service card section ================== */}
-      <div className="white-bg cpt-6 ">
-
-        {/* <!-- ================ Solving Problem Services start ================ --> */}
-        <SolvingProblem />
-
+      <div className="white-bg">
         <div className="cpt-7">
           <Featured alt={'about'} />
         </div>
-        {/* <!-- ================ Solving Problem Services end ================ --> */}
-        {/* <div className="cpt-6">
-          <ServiceCardItem
-            data={AboutServiceData}
-            title={" We’re like your cheif growth officer"}
-            description={``}
-            alt={'about'}
-            id={'about'}
-          />
-        </div> */}
-        {/* ===================service section end ================== */}
 
         {/* ================WHY CHOSE UP SECTION start================  */}
         <div className="cpb-7">

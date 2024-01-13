@@ -1,24 +1,12 @@
 /* =============== Hero section  =======*/
 #hero_about {
-  position: relative;
-  padding-top: 150px;
-  background-image: url(../../../public/assets/images/web-desgin/hero-bg-img.svg);
-  background-position:bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  padding-bottom: 450px;
-  margin-bottom: 100px;
+  padding:100px 0 100px 0;
   }
-  #hero_about .hero_content {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    width: 80%;
-    margin: auto;
+  .about_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
     align-items: center;
-    text-align: center;
-    justify-content: center;
   }
   #hero_about .hero_btns {
     display: flex;
@@ -61,16 +49,9 @@ background-clip: text;
   }
   #hero_about .hero_img2{
     width: 100%;
-    position: absolute;
-    bottom: -16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   #hero_about .hero_img3{
     width: 100%;
-    position: absolute;
-    bottom: -16px;
   }
   #hero_about .hero_img2 img{
     width: 100%;

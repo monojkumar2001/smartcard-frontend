@@ -238,8 +238,8 @@ export default function BlogDetails({ blog }) {
           </div>
         </div>
       </section>
-      <PostSubscriber />
-      <LatestBlog />
+      {/* <PostSubscriber /> */}
+      {/* <LatestBlog /> */}
     </>
   );
 }

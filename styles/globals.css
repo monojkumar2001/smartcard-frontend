@@ -66,10 +66,8 @@ div#__next {
   overflow-x: hidden;
 }
 body {
-  /* background-image: url(../public/assets/images/body-bg-2.svg); */
-  /* background-repeat:repeat-y; */
   position: relative;
-  background: #f9f9fc ;
+  background: #ffffff;
   z-index: 1;
   color: #11142d;
   font-size: var(--p-font);
@@ -148,7 +146,7 @@ table.table {
   position: relative;
   text-align: center;
   padding: 10px 35px;
-  box-shadow: 1px 1px 40px rgb(0 0 0 / 10%);
+  box-shadow: 3px 3px 5px #7f7a7a8f;
   outline: none;
   transition: 0.3s;
   cursor: pointer;
@@ -169,11 +167,11 @@ table.table {
 }
 
 .custom-btn:hover:before {
-  transform: translate(-50%) scale(310);
+  transform: translate(-50%) scale(464);
   opacity: 1;
 }
 .custom-btn:hover {
-  color: var(--main-color);
+  color: var(--black-color);
 }
 
 .custom-btn span {

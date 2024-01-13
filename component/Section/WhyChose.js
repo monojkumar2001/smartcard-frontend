@@ -48,7 +48,7 @@ function WhyChose({alt}) {
                     width={600}
                     height={600}
                     loading="lazy"
-                    src="/assets/new/inner/whychoseme.webp"
+                    src="/assets/images/home/why-choose.svg"
                     alt={alt}
                   />
                 </div>
