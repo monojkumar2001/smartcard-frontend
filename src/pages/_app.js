@@ -1,8 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/globals.css";
 import "../styles/App.css";
 import "../styles/Layout.css";
 import "../styles/style.css";
-import "../styles/bootstrap.min.css";
 import '../styles/dashboard.css';
 import "../styles/section/_global-style.scss";
 import Social from "../components/inner/Social";
@@ -13,8 +13,12 @@ import "../styles/inner/popup.css";
 import { useEffect } from "react";
 import OfferC from "../components/inner/OfferC";
 
-
+// import '../styles/bootstrap.bundle.min.js';
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
+
   useEffect(() => {
     Aos.init({
       easing: "ease-out-cubic",

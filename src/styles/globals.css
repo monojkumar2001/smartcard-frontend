@@ -124,6 +124,9 @@ span,
 label {
   margin: 0;
 }
+p{
+  margin-bottom: 0!important;
+}
 
 .ovh {
   overflow: hidden;

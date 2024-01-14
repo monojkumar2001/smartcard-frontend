@@ -117,12 +117,6 @@ const handlePreview=(index)=>{
                                     placeholder={`${socialPlatform}`}
                                     id={`${socialPlatform}-${index}`}
                                     name={`${socialPlatform}-${index}`}
-                                    // onChange={e =>
-                                    //     inputsHandler(
-                                    //         `${socialPlatform}-${index}`,
-                                    //         e.target.value,
-                                    //     )
-                                    // }
                                 />
                                 <span>
                                     <InputError
@@ -425,7 +419,7 @@ const handlePreview=(index)=>{
                                         id="cardName"
                                         type="text"
                                         name="cardName"
-                                        className="form-control p-4"
+                                        className="form-control p-3"
                                         onChange={inputsHandler}
                                         value={inputField.cardName}
                                         autoFocus
@@ -438,7 +432,7 @@ const handlePreview=(index)=>{
                                 </div>
                             </div>
 
-                            <div className="form-group-wrapper">
+                            <div className="form-group-wrapper mt-3">
                                 <div
                                     className="form-group-title"
                                     data-bs-toggle="collapse"
@@ -480,10 +474,10 @@ const handlePreview=(index)=>{
 
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/1.png" />
+                                                    <img src="/assets/images/dashboard/color/1.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -504,10 +498,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/2.png" />
+                                                    <img src="/assets/images/dashboard/color/2.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -528,10 +522,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/3.png" />
+                                                    <img src="/assets/images/dashboard/color/3.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -552,10 +546,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/4.png" />
+                                                    <img src="/assets/images/dashboard/color/4.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -576,10 +570,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/5.png" />
+                                                    <img src="/assets/images/dashboard/color/5.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -600,10 +594,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/6.png" />
+                                                    <img src="/assets/images/dashboard/color/6.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -624,10 +618,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/7.png" />
+                                                    <img src="/assets/images/dashboard/color/7.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -648,10 +642,10 @@ const handlePreview=(index)=>{
                                             />
                                             <span className="radio-btn">
                                                 <div className="hobbies-icon">
-                                                    <img src="/img/color/8.png" />
+                                                    <img src="/assets/images/dashboard/color/8.png" />
                                                 </div>
                                                 <img
-                                                    src="/img/icon/mark.svg"
+                                                    src="/assets/images/dashboard/color/mark.svg"
                                                     className="mark-icon"
                                                     alt=""
                                                 />
@@ -802,7 +796,7 @@ const handlePreview=(index)=>{
                                 </div>
                             </div>
 
-                            <div className="form-group-wrapper mt-3">
+                            <div className="form-group-wrapper mt-4">
                                 <div
                                     className="form-group-title"
                                     data-bs-toggle="collapse"
@@ -920,7 +914,7 @@ const handlePreview=(index)=>{
                                     </div>
                                 </div>
                             </div>
-                            <div className="form-group-wrapper mt-3">
+                            <div className="form-group-wrapper mt-4">
                                 <div
                                     className="form-group-title"
                                     data-bs-toggle="collapse"
@@ -1024,7 +1018,7 @@ const handlePreview=(index)=>{
                                     </div>
                                 </div>
                             </div>
-                            <div className="form-group-wrapper mt-3">
+                            <div className="form-group-wrapper mt-4">
                                 <div
                                     className="form-group-title"
                                     data-bs-toggle="collapse"
@@ -1148,7 +1142,7 @@ const handlePreview=(index)=>{
                             </div>
 
                             {/* ========== Social Media Item ============ */}
-                            <div className="form-group-wrapper mt-3">
+                            <div className="form-group-wrapper mt-4">
                                 <div
                                     className="form-group-title"
                                     data-bs-toggle="collapse"
@@ -1210,7 +1204,7 @@ const handlePreview=(index)=>{
                                 </div>
                             </div>
 
-                            <div className="form-group-wrapper mt-3">
+                            <div className="form-group-wrapper mt-4">
                                 <div
                                     className="form-group-title"
                                     data-bs-toggle="collapse"
@@ -1270,69 +1264,7 @@ const handlePreview=(index)=>{
                                     </div>
                                 </div>
                             </div>
-                            <div className="form-group-wrapper mt-3">
-                                <div
-                                    className="form-group-title"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#shareItem"
-                                    aria-expanded="false"
-                                    aria-controls="shareItem">
-                                    <p>Advance Options</p>
-                                    <div className="bottom-arrow">
-                                        <img
-                                            src="/img/icons/bottom-arrow.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                </div>
-
-                                <div
-                                    className="color-plate collapse"
-                                    id="shareItem">
-                                    <div className="row">
-                                        <div className="col-md-2">
-                                            <div className="info-form-label">
-                                                <p>Sharing:</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-10">
-                                            <div className="share-check-item d-flex align-items-center gap-2">
-                                                <input
-                                                    type="checkbox"
-                                                    id="check"
-                                                />
-                                                <label htmlFor="check">
-                                                    Add a share button
-                                                    to the page.
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row mt-3">
-                                        <div className="col-md-2">
-                                            <div className="info-form-label">
-                                                <p>Status:</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-10">
-                                            <div className="share-check-item">
-                                                <input
-                                                    type="checkbox"
-                                                    class="checkbox"
-                                                    id="checkbox"
-                                                />
-                                                <label
-                                                    for="checkbox"
-                                                    class="checkbox-label">
-                                                    <i class="fas fa-moon"></i>
-                                                    <i class="fas fa-sun"></i>
-                                                    <span class="ball"></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                       
                         </div>
                         <div className="col-lg-4 mb-4">
                             <div className="preview">
@@ -1440,7 +1372,7 @@ const handlePreview=(index)=>{
                                             <li className="card-list-li card-list-social">
                                                 <div className="preview-info-icon">
                                                     <img
-                                                        src="/img/icon/share.svg"
+                                                        src="/assets/images/dashboard/color/share.svg"
                                                         alt=""
                                                     />
                                                 </div>
