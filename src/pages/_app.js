@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/globals.css";
-import "../styles/App.css";
 import "../styles/Layout.css";
 import "../styles/style.css";
 import '../styles/dashboard.css';
-import "../styles/section/_global-style.scss";
+
 import Social from "../components/inner/Social";
 
 import Aos from "aos";

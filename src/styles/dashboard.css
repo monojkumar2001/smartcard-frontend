@@ -161,7 +161,7 @@ ul.qe-ul li {
 }
 
 .details a {
-  color: #00b2d9;
+  color: var(--color);
 }
 
 .scan {
@@ -201,6 +201,36 @@ ul.qe-ul li {
 }
 .qr-create-item ul li a:hover{
     color: #7922e6;
+}
+.business-progress-bar{
+padding-bottom: 35px;
+}
+.business-progress-bar h1{
+font-size: 20px;
+font-weight: 600;
+}
+.step-progress-bar{
+  width: 100%;
+  background: #eaeaea;
+  height: 5px;
+  border-radius: 4px;
+margin-bottom: 20px;
+
+}
+.step-progress-bar-item{
+  background:var(--main-color);
+  height: 100%;
+  border-radius: 4px;
+}
+.step-btn-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  gap: 20px;
+}
+.step-btn-item button{
+  width: 150px;
 }
 @media screen and (max-width: 1200px) {
   .qr-sidebar-left {
