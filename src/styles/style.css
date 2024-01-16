@@ -400,12 +400,17 @@ p.dajignation {
 }
 .preview-icon-item {
     width: 50px;
+    height: 50px;
     margin: auto;
-    background: #ffffff;
-    padding: 10px;
+font-size:25px;
+    background: #fff;
+color:var(--color);
     border-radius: 100%;
-    box-shadow: 4px 4px 4px #ddd;
+    box-shadow: 4px 4px 4px #dddddd6e;
     border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .preview-icon-item img {
@@ -1295,19 +1300,19 @@ button.eye-btn {
 .social-icon-item span {
     display: none;
     font-size: 15px;
-    color: #323032;
+    color: var(--second-color);
     position: absolute;
-    bottom: -25px;
+    bottom: -30px;
     min-width: 100px;
     text-align: center;
     width: 100%;
 }
-.social-icon-item img {
+.social-icon-list{
     width: 30px;
+    font-size:25px;
+    color:var(--color);
 }
-.info-form-label span img {
-    width: 30px;
-}
+
 .swiper-color-choice-item {
     height: 30px;
     width: 100%;

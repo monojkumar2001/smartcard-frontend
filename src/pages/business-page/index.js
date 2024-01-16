@@ -2,7 +2,7 @@ import AppLayout from "../../components/Layout/Layout";
 import Head from 'next/head'
 import React, { useEffect, useRef, useState, useCallback } from 'react'
 import QRCode from 'qrcode.react'
-// import htmlToImage from 'html-to-image'
+import { FaFacebook } from "react-icons/fa6";
 import InputError from '../../components/Inner/InputError'
 import { useAuth } from '../../hooks/auth'
 import axios from 'axios'
@@ -14,9 +14,9 @@ import Cropper from 'react-easy-crop';
 import GetCroppedImg from "../../components/inner/GetCroppedImg";
 import ImageUploader from "../../components/inner/ImageUploader";
 
-function BusinesQRPage() {
+function BusinesPage() {
 
-    const [picture, setPicture] = useState({
+    const [picture] = useState({
         image: null,
         imageUrl: '/img/product/shop-1.png',
     })
@@ -26,11 +26,6 @@ function BusinesQRPage() {
     const handleCrop = (croppedImage) => {
         // Set the cropped image in the state
         setCroppedImage(croppedImage);
-    };
-
-    const handleSave = () => {
-        // Do any additional processing or save the cropped image as needed
-        console.log('Cropped image saved:', croppedImage);
     };
 
 
@@ -107,32 +102,33 @@ function BusinesQRPage() {
     }
 
     const renderPreviewIcons = () => {
-        return previewIcons.map((socialPlatform, index) => (
-            <div key={index} className="preview-icon-item">
-                <img
-                    src={
-                        DataIcons.find(
-                            item => item.name.toLowerCase() === socialPlatform,
-                        )?.img
-                    }
-                    alt={socialPlatform}
-                />
-            </div>
-        ))
-    }
+        return previewIcons.map((socialPlatform, index) => {
+          const matchingIcon = DataIcons.find(
+            (item) => item.name.toLowerCase() === socialPlatform
+          );
+      
+          if (matchingIcon) {
+            return (
+              <div key={index} className="preview-icon-item">
+                {matchingIcon.icon} {/* Use the React Icon component */}
+              </div>
+            );
+          }
+      
+          return null; // or handle the case where the icon is not found
+        });
+      };
 
     const renderInputFields = () => {
         return selectedSocialPlatforms.map((socialPlatform, index) => (
-            <div key={index} className="row d-flex align-items-center mb-2">
+            <div key={index} className="row d-flex align-items-center mb-3">
                 <div className="col-md-3">
                     {/* Render label and icon based on selected social platform */}
                     {DataIcons.map(item =>
                         item.name.toLowerCase() === socialPlatform ? (
                             <div className="info-form-label" key={item.id}>
                                 <p>{item.name}</p>
-                                <span>
-                                    <img src={item.img} alt={item.name} />
-                                </span>
+                                <div className="social-icon-list">{item.icon}</div>
                             </div>
                         ) : null,
                     )}
@@ -184,7 +180,7 @@ function BusinesQRPage() {
         setIsChecked(!isChecked)
     }
     // ==================radio button color change ===============
-    const [selectedColor, setSelectedColor] = useState('#FFB317')
+    const [selectedColor, setSelectedColor] = useState('#851DD7')
 
     const [buttonColor, setButtoncolor] = useState('#555555')
 
@@ -792,83 +788,7 @@ function BusinesQRPage() {
 
 
 
-                                                {/* <div className="upload-image-wrapper upload-image-border">
-                                                    <p>Choose an image from templates or upload your own</p>
-                                                    <div className="row mt-4 d-flex justify-content-end">
-                                                        <div className="col-md-8">
-                                                            <div className="business-image-con">
-                                                                <div className="view-image business-image">
-                                                                    {picture.imageUrl && (
-                                                                        <AvatarEditor
-                                                                            ref={editorRef}
-                                                                            image={picture.imageUrl}
-                                                                            width={200}
-                                                                            height={200}
-                                                                            border={50}
-                                                                            color={[255, 255, 255, 0.6]} // RGBA values
-                                                                            scale={scale}
-                                                                        />
-                                                                    )}
-                                                                </div>
-                                                                <div className="upload-input">
-                                                                    <ImageUploader picture={picture} handleImage={handleImage} />
-                                                                    <div>
-                                                                        <label>Zoom:</label>
-                                                                        <input
-                                                                            type="range"
-                                                                            min="1"
-                                                                            max="2"
-                                                                            step="0.01"
-                                                                            value={scale}
-                                                                            onChange={handleScaleChange}
-                                                                        />
-                                                                    </div>
-                                                                    <button onClick={handleSave}>Save</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <InputError messages={errors.image} className="mt-2" />
-                                                </div> */}
-
-                                                {/* <div className="upload-image-wrapper upload-image-border">
-                                                    <p>
-                                                        Choose image from templates
-                                                        or upload your own
-                                                    </p>
-                                                    <div className="row mt-4 d-flex justify-content-end">
-                                                        <div className="col-md-8 ">
-                                                            <div className=" business-image-con">
-                                                                <div className="view-image business-image">
-                                                                    <img
-                                                                        src={
-                                                                            picture.imageUrl
-                                                                        }
-                                                                        width={200}
-                                                                    />
-                                                                </div>
-                                                                <ImageUploader  handleImage={handleImage} />
-                                                                <div className="upload-input">
-                                                                        <div className="file-btn custom-btn">
-                                                                            Upload
-                                                                        <input
-                                                                            type="file"
-                                                                            name="image"
-                                                                            onChange={
-                                                                                handleImage
-                                                                            }
-                                                                            className="file-input"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <InputError
-                                                        messages={errors.image}
-                                                        className="mt-2"
-                                                    />
-                                                </div> */}
+                                             
                                             </div>
                                         </div>
                                     </>
@@ -1242,7 +1162,7 @@ function BusinesQRPage() {
                                         </div>
 
                                         <div
-                                            className="color-plate collapse"
+                                            className="color-plate collapse show"
                                             id="social-media">
                                             <p className="mb-3">
                                                 Click on the icon to add social
@@ -1270,12 +1190,7 @@ function BusinesQRPage() {
                                                                         item.name.toLowerCase(),
                                                                     )
                                                                 }>
-                                                                <img
-                                                                    src={
-                                                                        item.img
-                                                                    }
-                                                                    alt=""
-                                                                />
+                                                        <div className="social-icon-list">{item.icon}</div>
                                                                 <span>
                                                                     {item.name}
                                                                 </span>
@@ -1601,5 +1516,5 @@ function BusinesQRPage() {
         </section>
     )
 }
-BusinesQRPage.layout = AppLayout;
-export default BusinesQRPage;
+BusinesPage.layout = AppLayout;
+export default BusinesPage;

@@ -44,7 +44,7 @@ const DashboardPage = () => {
                             <div className={`${createQrModel ? "qr-create-item active":"qr-create-item"}`}>
                                     <ul>
                                         <li>
-                                            <Link href="/business-qr-page">
+                                            <Link href="/business-page">
                                                 Business Page QR Code
                                             </Link>
                                         </li>
