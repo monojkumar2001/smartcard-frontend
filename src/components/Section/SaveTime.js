@@ -14,7 +14,7 @@ const SaveTime = () => {
             {data.map((item, i) => {
               return (
                 <div
-                  className="col-md-3"
+                  className=""
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   key={i}

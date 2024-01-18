@@ -4,7 +4,7 @@ import "../styles/Layout.css";
 import "../styles/style.css";
 import '../styles/dashboard.css';
 
-import Social from "../components/inner/Social";
+// import Social from "../components/inner/Social";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,6 +13,8 @@ import { useEffect } from "react";
 import OfferC from "../components/inner/OfferC";
 
 // import '../styles/bootstrap.bundle.min.js';
+
+
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");

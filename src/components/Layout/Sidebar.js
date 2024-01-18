@@ -1,13 +1,120 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { MdOutlineInventory2 } from "react-icons/md";
+import { MdDashboard } from "react-icons/md";
+import { CiShop } from "react-icons/ci";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { MdOutlineCategory } from "react-icons/md";
+import { AiOutlineUnorderedList } from "react-icons/ai";
+import { TbReportSearch } from "react-icons/tb";
+import { TbUsers } from "react-icons/tb";
+import { MdOutlineSubscriptions } from "react-icons/md";
 const Sidebar = () => {
-  const router = useRouter()
-  const isActive = path => router.pathname.startsWith(path)
-  return (
-    <>
-      <div className="sidebar-wrapper">
+    const router = useRouter()
+    const isActive = path => router.pathname.startsWith(path)
+    return (
+        <>
+            <div className="sidebar-wrapper">
+                <div className="dashboad-logo">
+                    <img src="/assets/images/dashboard/logo.svg" alt="" />
+                </div>
+
                 <div className="sidebar-menu">
+                    <ul className='sidebar-list'>
+                        <li>
+                            <Link href="/dashboard">
+                                <a
+                                    className={
+                                        isActive('/dashboard') ? 'active' : ''
+                                    }>
+                                 <span><LuLayoutDashboard /></span>
+                                    <p> Dashboard</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/manage-shop">
+                                <a
+                                    className={
+                                        isActive('/manage-shop') ? 'active' : ''
+                                    }>
+                                 <span><CiShop /></span>
+                                    <p>Manage Shop</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/product-shop">
+                                <a
+                                    className={
+                                        isActive('/product-shop') ? 'active' : ''
+                                    }>
+                                 <span><MdOutlineInventory2 /></span>
+                                    <p>Product Shop</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/category">
+                                <a
+                                    className={
+                                        isActive('/category') ? 'active' : ''
+                                    }>
+                                 <span><MdOutlineCategory /></span>
+                                    <p>Category</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/order">
+                                <a
+                                    className={
+                                        isActive('/order') ? 'active' : ''
+                                    }>
+                                 <span><AiOutlineUnorderedList /></span>
+                                    <p>Order</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/reports">
+                                <a
+                                    className={
+                                        isActive('/reports') ? 'active' : ''
+                                    }>
+                                 <span><TbReportSearch /></span>
+                                    <p>Reports</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/manage-users">
+                                <a
+                                    className={
+                                        isActive('/manage-users') ? 'active' : ''
+                                    }>
+                                 <span><TbUsers /></span>
+                                    <p>Manage Users</p>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/subscription">
+                                <a
+                                    className={
+                                        isActive('/subscription') ? 'active' : ''
+                                    }>
+                                 <span><MdOutlineSubscriptions /></span>
+                                    <p>Subscription</p>
+                                </a>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+
+                {/* <div className="sidebar-menu">
                     <h2>My Smart Cards</h2>
                     <ul className="sidebar-list">
                         <li>
@@ -78,14 +185,14 @@ const Sidebar = () => {
                             </Link>
                         </li>
                     </ul>
-                </div>
-                <div className="qr-sidebar-left">
+                </div> */}
+                {/* <div className="qr-sidebar-left">
                     <h3>Free Trial ends in 30 days</h3>
                     <button className="custom-btn qr-sidebar-left-btn"><span>Upgrade</span></button>
-                </div>
+                </div> */}
             </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default Sidebar

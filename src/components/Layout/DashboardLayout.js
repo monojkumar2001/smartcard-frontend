@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header'
+import DashboardHeader from './DashboardHeader'
 
 
 const DashboardLayout = ({ children }) => {
@@ -12,7 +13,7 @@ const DashboardLayout = ({ children }) => {
         </aside>
         <div className="page-content">
           <div className="dashboard-header">
-            <Header/>
+       <DashboardHeader/>
           </div>
           <div className="dashboard-content">
             {children}

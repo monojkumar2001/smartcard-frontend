@@ -24,7 +24,7 @@ button.submit-form {
     margin-bottom: 12px;
     border: none;
     outline: none;
-    background: #ffb317;
+    background: #851DD7;
     color: #fff;
     padding: 6px 20px;
     border-radius: 50px;
@@ -51,7 +51,7 @@ button.submit-form {
 }
 
 .form-title h2 {
-    color: #ffb317;
+    color: #851DD7;
     font-weight: 700;
     padding: 15px;
 }
@@ -460,7 +460,7 @@ a.back {
 
 button.submit-details-form {
     border: none;
-    background: #ffb317;
+    background: #851DD7;
     width: 200px;
     color: #fff;
     padding: 5px;
@@ -470,49 +470,6 @@ button.submit-details-form {
 .submit-details-form:focus {
     border: none;
     outline: none;
-}
-
-.sidebar {
-    background: #898989;
-    width: 260px;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    bottom: 0;
-    background: #616568;
-    color: #eaeaea;
-    font-size: 15px;
-    z-index: 2;
-    transition: margin-left 0.25s ease;
-    min-height: 93vh;
-}
-.sidebar-wrapper {
-    padding: 50px 40px;
-    position: relative;
-    height: 100%;
-}
-.sidebar-menu h2 {
-    color: #fff;
-    margin-bottom: 22px;
-}
-
-ul.sidebar-list li a {
-    display: flex;
-    color: #fff;
-    gap: 5px;
-    align-items: center;
-    margin-bottom: 15px;
-    transition: 0.3s;   
-}
-
-ul.sidebar-list li a.active,
-ul.sidebar-list li a:hover {
-    color: #ffb317;
-}
-
-ul.sidebar-list li a.active svg path,
-ul.sidebar-list li a:hover svg path {
-    fill: #ffb317;
 }
 
 .qr-nav {
@@ -537,11 +494,6 @@ ul.sidebar-list li a:hover svg path {
     align-items: center;
     gap: 10px;
 }
-
-.compnay-name-info h3 {
-    color: #000;
-}
-
 .qr-details {
     display: flex;
     align-items: center;
@@ -687,7 +639,7 @@ ul.sidebar-list li div {
 }
 
 ul.sidebar-list li div:hover {
-    color: #ffb317;
+    color: #851DD7;
 }
 
 .home-header {
@@ -746,7 +698,7 @@ button.hero-btn {
     padding: 13px 36px;
     border-radius: 54px;
     margin-top: 50px;
-    color: #ffb317;
+    color: #851DD7;
 }
 
 /* ====================== QR Input section ========================= */
@@ -1136,7 +1088,7 @@ button.eye-btn {
 
 /* veiw  */
 .view-header-item {
-    background: #ffb317;
+    background: #851DD7;
     padding-top: 50px;
 }
 .view-summary-title {
@@ -1351,7 +1303,7 @@ button.eye-btn {
     transition: 0.4s;
 }
 .select-qr-item:hover {
-    border: #FFB317 1px solid;
+    border: #851DD7 1px solid;
 }
 .select-qr-item:hover .select-qr-item-icon {
     transform: scale(1.2);
@@ -1363,7 +1315,7 @@ button.eye-btn {
     right: -8px;
     height: 24px;
     width: 24px;
-    background-color: #FFB317;
+    background-color: #851DD7;
     border-radius: 50%;
     content: '';
     font-size: 15px;
@@ -1470,26 +1422,26 @@ button.eye-btn {
 /* .custom-img-1 {
     width: 100%;
     height: 100%;
-    background: #ffb317;
+    background: #851DD7;
     mask: url('../../public/img/icons/social-img1.svg') 50% 50% / cover
         no-repeat;
 }
 .custom-img-2 {
     width: 100%;
     height: 100%;
-    background: #ffb317;
+    background: #851DD7;
     mask: url('../../public/img/icons/social-img2.svg') 50% 50% / cover
         no-repeat;
 }
 .custom-img-3 {
     width: 100%;
     height: 100%;
-    background: #ffb317;
+    background: #851DD7;
     mask: url('../../public/img/icons/social-img3.svg') 50% 50% / cover
         no-repeat;
 } */
 .swiper-slide.swiper-slide-active .custom-img-item {
-    border: 1px solid #ffb317;
+    border: 1px solid #851DD7;
 }
 .soical-media-top-header {
     padding: 40px 30px;
@@ -1551,7 +1503,7 @@ button.eye-btn {
     margin-top: 15px;
 }
 .show-preview-right p{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .opening-preview-title {
@@ -1618,7 +1570,7 @@ button.eye-btn {
     position: absolute;
     right: 30px;
     bottom: 30px;
-    background: #ffb317;
+    background: #851DD7;
     padding: 10px;
     border-radius: 100%;
     box-shadow: 5px 5px 10px #ddd;
@@ -1662,7 +1614,7 @@ button.eye-btn {
     position: absolute;
     top: -14px;
     right: -4px;
-    background-color: #ffb317;
+    background-color: #851DD7;
     color: #fff;
     border: none;
     padding: 8px;
@@ -1678,7 +1630,7 @@ button.eye-btn {
 .swiper-button-prev {
     width: 30px;
     height: 30px;
-    background-color: #ffb317;
+    background-color: #851DD7;
     color: #fff;
     display: flex;
     align-items: center;
