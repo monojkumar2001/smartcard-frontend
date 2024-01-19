@@ -1,0 +1,63 @@
+import React from 'react'
+
+const DeliveryChargesFrom = () => {
+    return (
+        <>
+            <div className="row">
+                <div className="col-md-12">
+                    <form action="">
+                        <div className="form-input-wrapper">
+                            <div className="form-input-header">
+                                <h2>Delivery Charges</h2>
+                            </div>
+                            <div className="form-input-body">
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <div className="form-input-item">
+                                            <label htmlFor="deliveryt_charge">Delivery Charge (Default)</label>
+                                            <input type="text" name='delivery_charge' id='delivery_charge' placeholder='Enter Your Business Name' required />
+                                            <span>Default delivery charge will be applied to all areas, except for the specific zones listed below.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="form-input-item">
+                                        <label htmlFor="country">Specific Delivery Charges</label>
+
+                                        <div className="delivery-charge-list">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+
+                                            <input type="number" />
+                                            <button>Add</button>
+                                        </div>
+
+                                    </div>
+
+            
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <div className="form-input-item">
+                                            <label htmlFor="shop_details">Shop Details</label>
+                                            <textarea name="shop_details" id="shop_details" cols="30" rows="5" placeholder='Enter your Shop Details'></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type='submit' className=''>Update Delivery Charge </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default DeliveryChargesFrom
