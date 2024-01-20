@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { IoMdAdd } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
-const ProductInfo = () => {
-    const [status, setStatus] = useState('active');
+const AddProductInfo = () => {
+    const [status, setStatus] = useState('active'); // Set the initial status to 'active'
 
-    const toggleStatus = () => {
-        setStatus((prevStatus) => (prevStatus === 'active' ? 'inactive' : 'active'));
+    const handleStatusChange = (e) => {
+        setStatus(e.target.value);
     };
     return (
         <>
@@ -13,8 +13,9 @@ const ProductInfo = () => {
                 <div className="col-md-12">
                     <form action="">
                         <div className="form-input-wrapper">
-                            <div className="form-input-header">
+                            <div className="form-input-header d-flex align-items-center justify-content-between gap-3">
                                 <h2>Product Info</h2>
+                                
                             </div>
                             <div className="form-input-body">
                                 <div className="row">
@@ -25,11 +26,11 @@ const ProductInfo = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="row">
-                                    <div className="col-md-11">
+                                <div className=" d-flex align-items-end mb-3 justify-content-between gap-2">
+                                    <div className="category-product-item">
                                         <div className="form-input-item">
                                             <label htmlFor="">Category</label>
-                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                            <select class="form-select form-select-lg" aria-label=".form-select-lg example">
                                                 <option selected>Select Category</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -38,7 +39,7 @@ const ProductInfo = () => {
 
                                         </div>
                                     </div>
-                                    <div className="col-md-1">
+                                    <div className="category-product-items">
                                         <button className='custom-btn-alt'><span><IoMdAdd /></span></button>
                                     </div>
                                 </div>
@@ -94,53 +95,50 @@ const ProductInfo = () => {
                                     </div>
 
                                 </div>
-                                <div className="row">
+                                <div className="row mt-3">
                                     <div className="col-md-12">
-                                        <div className="product-status-con">
+                                        <div className="product-status-con mb-4 ">
                                             <h3 className='product_shop_title'> Product Status</h3>
                                             <div className="product-status-item">
-                                                <button onClick={toggleStatus}>Toggle Status</button>
-
-                                                {/* Conditional rendering based on status */}
-                                                {status === 'active' ? (
-                                                    <p>active.</p>
-                                                ) : (
-                                                    <p>inactive.</p>
-                                                )}
+                                                    <select
+                                                        className="form-select form-select-lg"
+                                                        aria-label=".form-select-lg example"
+                                                        value={status}
+                                                        onChange={handleStatusChange}
+                                                    >
+                                                        <option value='1'>Active</option>
+                                                        <option value='2'>Inactive</option>
+                                                    </select>
                                             </div>
                                         </div>
                                         <p>Toggle the switch to 'On' if you want the product to be displayed and available for purchase on your ecommerce website. When the switch is 'On' (active), the product will be visible to customers. To temporarily hide the product, simply switch it 'Off' (inactive).</p>
                                     </div>
                                 </div>
-                                <div className="row">
+                                <div className="row mt-4">
                                     <div className="col-md-12">
                                         <div className="product-details">
-                                            <h3 className='product_shop_title'>Product Details</h3>
+                                            <h3>Product Details</h3>
                                             <p>You can add multiple product details for a single product here. Like Brand, Model, Serial Number, Fabric Type, and EMI etc.</p>
                                         </div>
-                                        <div className="row">
-                                            <div className="col-md-5">
-                                                <div className="form-input-item">
+                                        <div className="d-flex gap-3 my-3 align-items-end w-100 justify-content-between">
+                                        <div className="form-input-item mb-0">
                                                     <label htmlFor="detail_type">Detail Type</label>
                                                     <input type="text" name='detail_type' id='detail_type' placeholder='detail_type' />
                                                 </div>
-                                            </div>
-                                            <div className="col-md-5">
-                                                <div className="form-input-item">
+                                                <div className="form-input-item mb-0">
                                                     <label htmlFor="detail_description">Detail Description</label>
                                                     <input type="text" name='detail_description' id='detail_description' placeholder='Detail Type' />
                                                 </div>
-                                            </div>
-                                            <div className="col-md-2">
-                                                <span className='detail_danger'><IoCloseSharp /></span>
-                                            </div>
+                                                <button className='detail_danger'><IoCloseSharp /></button>
+                                          
                                         </div>
-                                        <button>
-                                            <span><IoMdAdd />   Add a new Field</span>
+                                        <button className='custom-btn-alt'>
+                                            <span><IoMdAdd />  </span>
+                                            Add a new Field
                                         </button>
                                     </div>
                                 </div>
-                                <button type='submit' className=''>Add Product</button>
+                                <button type='submit' className='custom-btn-alt mt-4 w-100'>Add Product</button>
                             </div>
                         </div>
                     </form>
@@ -149,4 +147,4 @@ const ProductInfo = () => {
     )
 }
 
-export default ProductInfo
+export default AddProductInfo

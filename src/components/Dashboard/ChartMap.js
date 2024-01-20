@@ -1,72 +1,68 @@
-import React, { useEffect, useState } from 'react';
-import moment from 'moment';
-import { Chart } from 'chart.js/auto';
-  
+import React from 'react';
+import faker from 'faker';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const generateLast30DaysLabels = () => {
+  const labels = [];
+  const today = new Date();
+
+  for (let i = 29; i >= 0; i--) {
+    const date = new Date(today);
+    date.setDate(today.getDate() - i);
+    const month = date.toLocaleString('default', { month: 'long' });
+    const day = date.getDate();
+    labels.push(`${month} ${day}`);
+  }
+
+  return labels;
+};
+
+export const options = {
+  responsive: true,
+  plugins: {
+    title: {
+      display: true,
+      text: 'Last 30 days report',
+    },
+  },
+};
+
+const labels = generateLast30DaysLabels();
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: 'product items',
+      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      borderColor: 'rgb(53, 162, 235)',
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
+
 const ChartMap = () => {
-  const [chartData, setChartData] = useState(null);
-
-  useEffect(() => {
-    // Set specific data for two days
-    const data = [
-      {
-        date: '01/10',
-        month: 'Jan',
-        value: 30,
-      },
-      {
-        date: '01/18',
-        month: 'Jan',
-        value: 45,
-      },
-    ];
-
-    // Create a chart
-    const ctx = document.getElementById('myChart').getContext('2d');
-
-    const myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: data.map(entry => `${entry.date} (${entry.month})`),
-        datasets: [{
-          label: 'Values',
-          data: data.map(entry => entry.value),
-          borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 2,
-          fill: false,
-        }],
-      },
-      options: {
-        scales: {
-          x: {
-            type: 'linear',
-            position: 'bottom',
-            beginAtZero: true,
-            ticks: {
-              stepSize: 1,
-            },
-          },
-          y: {
-            beginAtZero: true,
-          },
-        },
-      },
-    });
-
-    setChartData(myChart);
-
-    // Cleanup function to destroy the chart on component unmount
-    return () => {
-      if (myChart) {
-        myChart.destroy();
-      }
-    };
-  }, []);
-
-  return (
-    <div>
-      <canvas id="myChart" width="400" height="200"></canvas>
-    </div>
-  );
+  return <Line options={options} data={data} />;
 };
 
 export default ChartMap;

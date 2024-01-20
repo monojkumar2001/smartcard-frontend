@@ -186,7 +186,29 @@ table.table {
   position: relative;
   z-index: 1;
 }
-
+.custom-btn-alt{
+  display: inline-block;
+  background: var(--main-color);
+  border-radius: 7px;
+  font-size: var(--p-font);
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: capitalize;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 10px 25px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+.custom-btn-alt span{
+  font-size: 25px;
+}
+.denger-btn{
+  background: rgb(179, 3, 3);
+}
 /* ===============custom button alt=============== */
 
 .btn:focus {

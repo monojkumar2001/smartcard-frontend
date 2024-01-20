@@ -3,7 +3,7 @@ import DashboardLayout from '../../components/Layout/DashboardLayout'
 import Link from 'next/link'
 import { MdDateRange } from "react-icons/md";
 import { FaMoneyBillWave } from "react-icons/fa6";
-import { FiUsers } from "react-icons/fi";
+import { FiUsers } from "react-icons/Fi";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import QRCode from 'qrcode.react';
 import { FaRegCopy } from "react-icons/fa";
@@ -44,7 +44,7 @@ const DashboardPage = () => {
                     <p>Fri 19, Jan 2024</p>
                     <h3>Hello, <span>monoj</span></h3>
                 </div>
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-md-4">
                         <div className="order-sale-item-con">
                             <div className="order-sale-item">
@@ -80,19 +80,19 @@ const DashboardPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-md-6">
-                        <div className="add-product-item-card">
-                            <Link href={'/product-shop'}>
-                                <>
-                                    <span><IoIosAddCircleOutline /></span>
-                                    <p>Add product in your shop</p>
-                                </>
-                            </Link>
-                        </div>
+                        <Link href={'/product-shop/new'}>
+                            <div className="add-product-item-card">
+
+                                <span><IoIosAddCircleOutline /></span>
+                                <p>Add product in your shop</p>
+
+                            </div>
+                        </Link>
                     </div>
                     <div className="col-md-6">
-                        <div className="shop-details-card">
+                        <div className="shop-details-card add-product-item-card">
                             <div className="shop-details-title d-flex align-items-center justify-content-between">
                                 <div className="shop-details-title">
                                     <p>Shop Details</p>
@@ -107,90 +107,92 @@ const DashboardPage = () => {
                             </div>
                             <div className="shop-copy-link">
                                 <p>{shopLink}</p>
-                                <span onClick={handleCopyClick}><FaRegCopy /></span>
-                                {isCopied && <p>Copied to clipboard!</p>}
+                                <p onClick={handleCopyClick} className="copy-icon">
+                                    <FaRegCopy />
+                                    <span className="shop-copy-text">{isCopied ? 'Copied!' : ''}</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-md-6">
                         <div className="shop-product-stack-item">
-                            <div className="shop-product-title">
-                                <h3>Low Stock Products</h3>
+                            <div className="shop-details-title">
+                                <h4>Low Stock Products</h4>
                             </div>
-                         <div className='table-container'>
-                         <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Quantity</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>monoj kumar</td>
-                                        <td>50</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>monoj kumar</td>
-                                        <td>50</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>monoj kumar</td>
-                                        <td>50</td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                         </div>
+                            <div className='table-container'>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>monoj kumar</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>monoj kumar</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>monoj kumar</td>
+                                            <td>50</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="shop-product-stack-item">
-                            <div className="shop-product-title">
-                                <h3>Most Sold Item</h3>
+                            <div className="shop-details-title">
+                                <h4>Most Sold Item</h4>
                             </div>
-                         <div className='table-container'>
-                         <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Quantity</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>monoj kumar</td>
-                                        <td>50</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>monoj kumar</td>
-                                        <td>50</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>monoj kumar</td>
-                                        <td>50</td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                         </div>
+                            <div className='table-container'>
+                                <table className="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>monoj kumar</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>monoj kumar</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>monoj kumar</td>
+                                            <td>50</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-5">
                     <div className="col-md-12">
                         <div className="dashboard-map">
-                            <ChartMap/>
+                            <ChartMap />
                         </div>
                     </div>
                 </div>

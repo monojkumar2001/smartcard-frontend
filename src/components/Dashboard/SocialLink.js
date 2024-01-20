@@ -2,7 +2,7 @@ import React from 'react'
 
 const SocialLink = () => {
     return (
-        <div className="row">
+        <div className="row mt-4">
             <div className="col-md-12">
                 <form action="">
                     <div className="form-input-wrapper">
@@ -61,7 +61,7 @@ const SocialLink = () => {
                                 </div>
                             </div>
                
-                            <button type='submit' className=''>Update Social <Links></Links></button>
+                            <button type='submit' className='custom-btn-alt'>Update Social Links</button>
                         </div>
                     </div>
                 </form>

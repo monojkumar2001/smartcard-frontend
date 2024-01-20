@@ -3,7 +3,7 @@ import React from 'react'
 const DeliveryChargesFrom = () => {
     return (
         <>
-            <div className="row">
+            <div className="row mt-4">
                 <div className="col-md-12">
                     <form action="">
                         <div className="form-input-wrapper">
@@ -26,7 +26,7 @@ const DeliveryChargesFrom = () => {
                                         <label htmlFor="country">Specific Delivery Charges</label>
 
                                         <div className="delivery-charge-list">
-                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                            <select class="form-select form-select-lg" aria-label=".form-select-lg example">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -34,7 +34,7 @@ const DeliveryChargesFrom = () => {
                                             </select>
 
                                             <input type="number" />
-                                            <button>Add</button>
+                                            <button className='delivery-add-btn'>Add</button>
                                         </div>
 
                                     </div>
@@ -50,7 +50,7 @@ const DeliveryChargesFrom = () => {
                                     </div>
 
                                 </div>
-                                <button type='submit' className=''>Update Delivery Charge </button>
+                                <button type='submit' className='custom-btn-alt' >Update Delivery Charge </button>
                             </div>
                         </div>
                     </form>

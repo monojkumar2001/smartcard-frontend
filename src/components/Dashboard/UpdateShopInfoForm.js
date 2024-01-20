@@ -21,7 +21,7 @@ const UpdateShopInfoForm = () => {
                                     <div className="col-md-6">
                                         <div className="form-input-item">
                                             <label htmlFor="business_name">Business Type</label>
-                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                            <select class="form-select form-select-lg " aria-label=".form-select-lg example">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -74,7 +74,7 @@ const UpdateShopInfoForm = () => {
                                     </div>
 
                                 </div>
-                                <button type='submit' className=''>Update Shop Info</button>
+                                <button type='submit' className='custom-btn-alt'>Update Shop Info</button>
                             </div>
                         </div>
                     </form>

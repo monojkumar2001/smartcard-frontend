@@ -1,8 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/globals.css";
 import "../styles/Layout.css";
-import "../styles/style.css";
+// import "../styles/style.css";
 import '../styles/dashboard.css';
+
 
 // import Social from "../components/inner/Social";
 
@@ -11,7 +12,7 @@ import "aos/dist/aos.css";
 import "../styles/inner/popup.css";
 import { useEffect } from "react";
 import OfferC from "../components/inner/OfferC";
-
+import '../styles/responsive.css';
 // import '../styles/bootstrap.bundle.min.js';
 
 
