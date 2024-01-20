@@ -24,7 +24,7 @@ const manageUsersPage = () => {
                                     <span>monoj93roy@gmail.com</span>
                                 </div>
                                 <div className="manage-user-btn">
-                                    <button className='custom-btn-alt'>Shop Owner</button>
+                                    <button >Shop Owner</button>
                                 </div>
                             </div>
                             <div className="manage-user-right">
