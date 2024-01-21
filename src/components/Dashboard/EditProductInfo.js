@@ -1,12 +1,34 @@
 import React, { useState } from 'react'
 import { IoMdAdd } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
+import ProductRemoveModal from '../AllModel/ProductRemoveModal';
+import CreateCategoryModal from '../AllModel/CreateCategoryModal';
 const EditProductInfo = () => {
     const [status, setStatus] = useState('active'); // Set the initial status to 'active'
 
     const handleStatusChange = (e) => {
         setStatus(e.target.value);
     };
+
+
+    const [fields, setFields] = useState([{ detail_type: '', detail_description: '' }]);
+
+    const handleInputChange = (index, fieldName, value) => {
+      const newFields = [...fields];
+      newFields[index][fieldName] = value;
+      setFields(newFields);
+    };
+  
+    const handleAddField = () => {
+      setFields([...fields, { detail_type: '', detail_description: '' }]);
+    };
+  
+    const handleRemoveField = (index) => {
+      const newFields = [...fields];
+      newFields.splice(index, 1);
+      setFields(newFields);
+    };
+  
     return (
         <>
             <div className="row">
@@ -15,7 +37,7 @@ const EditProductInfo = () => {
                         <div className="form-input-wrapper">
                             <div className="form-input-header d-flex align-items-center justify-content-between gap-3">
                                 <h2>Product Info</h2>
-                                <button className='denger-btn custom-btn-alt'>Remove from Product</button>
+                                <ProductRemoveModal/>
                             </div>
                             <div className="form-input-body">
                                 <div className="row">
@@ -39,9 +61,7 @@ const EditProductInfo = () => {
 
                                         </div>
                                     </div>
-                                    <div className="category-product-items">
-                                        <button className='custom-btn-alt'><span><IoMdAdd /></span></button>
-                                    </div>
+                                    <CreateCategoryModal/>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -120,22 +140,39 @@ const EditProductInfo = () => {
                                             <h3>Product Details</h3>
                                             <p>You can add multiple product details for a single product here. Like Brand, Model, Serial Number, Fabric Type, and EMI etc.</p>
                                         </div>
-                                        <div className="d-flex  my-3 align-items-end w-100 gap-3 justify-content-between">
-                                        <div className="form-input-item mb-0">
-                                                    <label htmlFor="detail_type">Detail Type</label>
-                                                    <input type="text" name='detail_type' id='detail_type' placeholder='detail_type' />
-                                                </div>
-                                                <div className="form-input-item mb-0">
-                                                    <label htmlFor="detail_description">Detail Description</label>
-                                                    <input type="text" name='detail_description' id='detail_description' placeholder='Detail Type' />
-                                                </div>
-                                                <button className='detail_danger'><IoCloseSharp /></button>
-                                          
-                                        </div>
-                                        <button className='custom-btn-alt'>
-                                            <span><IoMdAdd />  </span>
-                                            Add a new Field
-                                        </button>
+                                        {fields.map((field, index) => (
+        <div className="d-flex gap-3 my-3 align-items-end w-100 justify-content-between" key={index}>
+          <div className="form-input-item mb-0">
+            <label htmlFor={`detail_type_${index}`}>Detail Type</label>
+            <input
+              type="text"
+              name={`detail_type_${index}`}
+              id={`detail_type_${index}`}
+              placeholder='detail_type'
+              value={field.detail_type}
+              onChange={(e) => handleInputChange(index, 'detail_type', e.target.value)}
+            />
+          </div>
+          <div className="form-input-item mb-0">
+            <label htmlFor={`detail_description_${index}`}>Detail Description</label>
+            <input
+              type="text"
+              name={`detail_description_${index}`}
+              id={`detail_description_${index}`}
+              placeholder='Detail Description'
+              value={field.detail_description}
+              onChange={(e) => handleInputChange(index, 'detail_description', e.target.value)}
+            />
+          </div>
+          <button className='detail_danger' onClick={() => handleRemoveField(index)}>
+            <IoCloseSharp />
+          </button>
+        </div>
+      ))}
+                                        <button className='custom-btn-alt' onClick={handleAddField}>
+        <span><IoMdAdd /></span>
+        Add a new Field
+      </button>
                                     </div>
                                 </div>
                                 <button type='submit' className='custom-btn-alt mt-4 w-100'>Add Product</button>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Model from "./Model";
-import { RiDeleteBin6Line } from "react-icons/ri";
+import LayoutModal from "./LayoutModal";
 
-const EditCategory = () => {
+const CreateCategoryModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -15,16 +14,13 @@ const EditCategory = () => {
 
   return (
     <>
-      <div className="category-item-left" onClick={openModal}>
-        <h4>terfasdffh</h4>
-        <p>
-          Inventory Items: <span>0</span>
-        </p>
+      <div onClick={openModal} className="custom-btn-alt create-category-btn">
+        New Category
       </div>
-      <Model isOpen={isModalOpen} onClose={closeModal}>
+      <LayoutModal isOpen={isModalOpen} onClose={closeModal}>
         <div className="model-content-wrapper">
           <form action="">
-            <h1 className="model-item-title">Update Category</h1>
+            <h1 className="model-item-title">New Category</h1>
             <div className="form-input-item">
               <label htmlFor="category_name">Category Name</label>
               <input
@@ -36,16 +32,16 @@ const EditCategory = () => {
               />
             </div>
             <div className="model-btn-items">
-              <button className="custom-btn-alt">Update</button>
+              <button className="custom-btn-alt">Create</button>
               <button className="close-button" onClick={closeModal}>
                 Cancel
               </button>
             </div>
           </form>
         </div>
-      </Model>
+      </LayoutModal>
     </>
   );
 };
 
-export default EditCategory;
+export default CreateCategoryModal;

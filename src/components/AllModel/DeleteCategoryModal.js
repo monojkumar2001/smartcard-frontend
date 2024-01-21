@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Model from "./Model";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import LayoutModel from "./LayoutModal";
 
-const DeleteCategory = () => {
+const DeleteCategoryModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -18,7 +18,7 @@ const DeleteCategory = () => {
       <button onClick={openModal} className="category-delete-btn">
         <RiDeleteBin6Line />{" "}
       </button>
-      <Model isOpen={isModalOpen} onClose={closeModal}>
+      <LayoutModel isOpen={isModalOpen} onClose={closeModal}>
         <div className="model-content-wrapper">
           <form action="">
             <p className="text-center mb-3">
@@ -32,9 +32,9 @@ const DeleteCategory = () => {
             </div>
           </form>
         </div>
-      </Model>
+      </LayoutModel>
     </>
   );
 };
 
-export default DeleteCategory;
+export default DeleteCategoryModal;

@@ -24,10 +24,10 @@ const AddProductShopPage = () => {
             <div className="dashboard-content-wrapper">
                 <h2 className='dasbhoard-header-title'>Add New Product</h2>
                 <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                         <AddProductInfo/>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6">
                         <div className="row">
                             <div className="col-md-12">
                                 <form action="">
@@ -60,7 +60,7 @@ const AddProductShopPage = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type='submit' className='custom-btn-alt w-100 mt-2'>Update Delivery Charge </button>
+                                            <button type='submit' className='custom-btn-alt w-100 mt-4'>Update Delivery Charge </button>
                                         </div>
                                     </div>
                                 </form>

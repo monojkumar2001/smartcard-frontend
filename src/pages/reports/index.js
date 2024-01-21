@@ -1,25 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DashboardLayout from '../../components/Layout/DashboardLayout';
 import { FaMoneyBillWave } from 'react-icons/fa';
 import { MdDateRange } from 'react-icons/md';
 import { FiUsers } from 'react-icons/Fi';
-
+import { MdCalendarMonth } from "react-icons/md";
+import CustomDateRangeModal from '../../components/AllModel/CustomDateRangeModal';
+import Link from 'next/link';
 const ReportsPage = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const handleDropdownToggle = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const handleOptionSelect = (option) => {
+        setSelectedOption(option);
+        setIsOpen(false);
+    };
     return (
         <>
             <div className="dashboard-content-wrapper">
                 <div className="reports-header d-flex align-items-center justify-content-between gap-3 mb-4">
                     <h3 className='dasbhoard-header-title'>Order Report</h3>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown button
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>This Month</li>
-                            <li>This Month</li>
-                            <li>Custom Date Range</li>
-                        </ul>
+                    <div className="custom-dropdown">
+                        <div className="dropdown-header" onClick={handleDropdownToggle}>
+                            {selectedOption || 'Filter Report'}
+                        </div>
+
+                        {isOpen && (
+                            <div className="dropdown-options">
+                                <div className="option" onClick={() => handleOptionSelect('This Month')}>
+                                    This Month
+                                </div>
+                                <div className="option" onClick={() => handleOptionSelect('Last Month')}>
+                                    Last Month
+                                </div>
+                                <CustomDateRangeModal />
+                            </div>
+                        )}
                     </div>
+
                 </div>
                 <div className="row">
                     <div className="col-md-3">
@@ -79,7 +100,8 @@ const ReportsPage = () => {
                             <div className="form-input-body">
                                 <div className="row">
                                     <div className="col-md-3">
-                                        <div className="reports-card-item">
+                                 <Link href={'/order/[id]'}>
+                                 <div className="reports-card-item">
                                             <div className="reports-card-list">
                                                 <p>#2</p>
                                                 <p>19/01/2024 | 02:11 AM</p>
@@ -89,11 +111,12 @@ const ReportsPage = () => {
                                                 <p>Price: 384</p>
                                             </div>
                                             <div className="reports-btns mt-2  ">
-                                            <button className='online-btn'>Online</button>
+                                                <button className='online-btn'>Online</button>
 
-                                                    <button className='completed-btn'>Order Completed</button>
+                                                <button className='completed-btn'>Order Completed</button>
                                             </div>
                                         </div>
+                                 </Link>
                                     </div>
                                 </div>
                             </div>

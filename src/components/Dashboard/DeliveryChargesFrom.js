@@ -1,6 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { IoMdAdd } from 'react-icons/io';
 
 const DeliveryChargesFrom = () => {
+    const [deliveryCharges, setDeliveryCharges] = useState([{ selectValue: '', inputValue: '' }]);
+
+    const handleSelectChange = (index, value) => {
+        const newCharges = [...deliveryCharges];
+        newCharges[index].selectValue = value;
+        setDeliveryCharges(newCharges);
+    };
+
+    const handleInputChange = (index, value) => {
+        const newCharges = [...deliveryCharges];
+        newCharges[index].inputValue = value;
+        setDeliveryCharges(newCharges);
+    };
+
+    const handleAddButtonClick = () => {
+        setDeliveryCharges([...deliveryCharges, { selectValue: '', inputValue: '' }]);
+    };
+
+    const handleRemoveButtonClick = (index) => {
+        const newCharges = [...deliveryCharges];
+        newCharges.splice(index, 1);
+        setDeliveryCharges(newCharges);
+    };
     return (
         <>
             <div className="row mt-4">
@@ -25,21 +49,40 @@ const DeliveryChargesFrom = () => {
                                     <div className="form-input-item">
                                         <label htmlFor="country">Specific Delivery Charges</label>
 
-                                        <div className="delivery-charge-list">
-                                            <select class="form-select form-select-lg" aria-label=".form-select-lg example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
+                                        {deliveryCharges.map((charge, index) => (
+                                            <div className="delivery-charge-list" key={index}>
+                                                <select
+                                                    className="form-select form-select-lg"
+                                                    aria-label=".form-select-lg example"
+                                                    value={charge.selectValue}
+                                                    onChange={(e) => handleSelectChange(index, e.target.value)}
+                                                >
+                                                    <option value="">Open this select menu</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
 
-                                            <input type="number" />
-                                            <button className='delivery-add-btn'>Add</button>
-                                        </div>
+                                                <input
+                                                    type="number"
+                                                    value={charge.inputValue}
+                                                    onChange={(e) => handleInputChange(index, e.target.value)}
+                                                />
+
+                                                <button className="delivery-add-btn" onClick={() => handleRemoveButtonClick(index)}>
+                                                    Remove
+                                                </button>
+                                            </div>
+                                        ))}
+
+                                        <button className="custom-btn-alt delivery-charge-list-btn" onClick={handleAddButtonClick}>
+                                        <span><IoMdAdd /></span>
+                                            Add
+                                        </button>
 
                                     </div>
 
-            
+
                                 </div>
                                 <div className="row">
                                     <div className="col-md-12">
