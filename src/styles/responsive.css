@@ -8,3 +8,14 @@
     }
   }
   
+@media screen and (max-width: 568px) {
+  .model {
+  padding: 20px;
+  max-width: 90%;
+  max-height: 100%;
+}
+.model-content-wrapper{
+  width: 100%;
+}
+  }
+  
