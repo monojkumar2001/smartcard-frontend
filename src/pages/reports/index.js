@@ -43,7 +43,7 @@ const ReportsPage = () => {
 
                 </div>
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-6 col-lg-3 ">
                         <div className="order-sale-item-con">
                             <div className="order-sale-item">
                                 <p>Total Amount</p>
@@ -54,7 +54,7 @@ const ReportsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-6 col-lg-3 ">
                         <div className="order-sale-item-con">
                             <div className="order-sale-item">
                                 <p>Total Sales</p>
@@ -66,7 +66,7 @@ const ReportsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-6 col-lg-3 ">
                         <div className="order-sale-item-con">
                             <div className="order-sale-item">
                                 <p>Total Item Sales</p>
@@ -77,7 +77,7 @@ const ReportsPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-6 col-lg-3 ">
                         <div className="order-sale-item-con">
                             <div className="order-sale-item">
                                 <p>Total Customer Served</p>
@@ -100,23 +100,42 @@ const ReportsPage = () => {
                             <div className="form-input-body">
                                 <div className="row">
                                     <div className="col-md-3">
-                                 <Link href={'/order/[id]'}>
-                                 <div className="reports-card-item">
-                                            <div className="reports-card-list">
-                                                <p>#2</p>
-                                                <p>19/01/2024 | 02:11 AM</p>
-                                            </div>
-                                            <div className="reports-card-list">
-                                                <p>Items: 1</p>
-                                                <p>Price: 384</p>
-                                            </div>
-                                            <div className="reports-btns mt-2  ">
-                                                <button className='online-btn'>Online</button>
+                                        <Link href={'/order/[id]'}>
+                                            <div className="reports-card-item">
+                                                <div className="reports-card-list">
+                                                    <p>#2</p>
+                                                    <p>19/01/2024 | 02:11 AM</p>
+                                                </div>
+                                                <div className="reports-card-list">
+                                                    <p>Items: 1</p>
+                                                    <p>Price: 384</p>
+                                                </div>
+                                                <div className="reports-btns mt-2  ">
+                                                    <button className='online-btn'>Online</button>
 
-                                                <button className='completed-btn'>Order Completed</button>
+                                                    <button className='completed-btn'>Order Completed</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                 </Link>
+                                        </Link>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <Link href={'/order/[id]'}>
+                                            <div className="reports-card-item">
+                                                <div className="reports-card-list">
+                                                    <p>#2</p>
+                                                    <p>19/01/2024 | 02:11 AM</p>
+                                                </div>
+                                                <div className="reports-card-list">
+                                                    <p>Items: 1</p>
+                                                    <p>Price: 384</p>
+                                                </div>
+                                                <div className="reports-btns mt-2  ">
+                                                    <button className='online-btn'>Online</button>
+
+                                                    <button className='completed-btn'>Order Completed</button>
+                                                </div>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
