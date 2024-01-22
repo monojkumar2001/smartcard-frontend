@@ -24,6 +24,13 @@ const DashboardLayout = ({ children }) => {
           <div className="dashboard-header">
             <DashboardHeader toggleSidebar={toggleSidebar} />
           </div>
+          <div className="dashboard-content">
+            {children}
+            <div className="dashboard-footer d-flex align-items-center justify-content-center my-5">
+            <p>2023@atly. All rights reserved</p>
+          </div>
+          </div>
+       
           <div className="dashboard-content">{children}</div>
           <div className="dashboard-footer"></div>
         </div>

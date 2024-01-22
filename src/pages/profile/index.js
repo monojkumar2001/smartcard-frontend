@@ -30,9 +30,6 @@ const UserProfilePage = () => {
         <div className="row mx-auto w-100 d-flex align-items-center justify-content-center">
           <div className="col-md-10">
             <div className="user-profile-wrapper">
-              {/* <div className="user-profle-img">
-                <img src="/assets/images/dashboard/profile.png" alt="" />
-              </div> */}
               <div className="upload-btn-wrapper-img upload-btn-wrapper">
                 <h4>Profile Picture</h4>
                 {previewImage && (

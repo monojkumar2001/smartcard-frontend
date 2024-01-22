@@ -1,6 +1,6 @@
 import React from "react";
 
-const Model = ({ isOpen, onClose, children }) => {
+const LayoutModal = ({ isOpen, children }) => {
   return (
     <>
       {isOpen && (
@@ -14,4 +14,4 @@ const Model = ({ isOpen, onClose, children }) => {
   );
 };
 
-export default Model;
+export default LayoutModal;

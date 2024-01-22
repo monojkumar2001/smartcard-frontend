@@ -1,8 +1,8 @@
 import React from "react";
 import DashboardLayout from "../../components/Layout/DashboardLayout";
-import CreateCategory from "../../components/AllModel/CreateCategory";
-import EditCategory from "../../components/AllModel/EditCategory";
-import DeleteCategory from "../../components/AllModel/DeleteCategory";
+import CreateCategoryModal from "../../components/AllModel/CreateCategoryModal";
+import EditCategoryModal from "../../components/AllModel/EditCategoryModal";
+import DeleteCategoryModal from "../../components/AllModel/DeleteCategoryModal";
 const CategoryPage = () => {
     
   return (
@@ -10,50 +10,51 @@ const CategoryPage = () => {
       <div className="dashboard-content-wrapper">
         <div className="category-header d-flex align-items-center justify-content-between gap-3">
           <h3 className="dasbhoard-header-title">Category</h3>
-          <CreateCategory />
+          <CreateCategoryModal />
         </div>
         <div className="category-content">
           <div className="row mt-5">
             <div className="col-md-4">
               <div className="category-item-card">
-                <EditCategory />
+                <EditCategoryModal />
                 <div className="category-item-right">
-                  <DeleteCategory />
+                  <DeleteCategoryModal />
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="category-item-card">
-                <EditCategory />
+                <EditCategoryModal />
                 <div className="category-item-right">
-                  <DeleteCategory />
+                  <DeleteCategoryModal />
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="category-item-card">
-                <EditCategory />
+                <EditCategoryModal />
                 <div className="category-item-right">
-                  <DeleteCategory />
+                  <DeleteCategoryModal />
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="category-item-card">
-                <EditCategory />
+                <EditCategoryModal />
                 <div className="category-item-right">
-                  <DeleteCategory />
+                  <DeleteCategoryModal />
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="category-item-card">
-                <EditCategory />
+                <EditCategoryModal />
                 <div className="category-item-right">
-                  <DeleteCategory />
+                  <DeleteCategoryModal />
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

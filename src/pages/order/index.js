@@ -45,7 +45,7 @@ const OrderPage = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <Link href={'/'}>
+                                <Link href={'/order/[id]'}>
                                     <tr>
                                         <td scope="row">1</td>
                                         <td>20883</td>
