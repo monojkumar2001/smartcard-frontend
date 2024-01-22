@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import DashboardLayout from '../../components/Layout/DashboardLayout';
 import { IoSearch } from "react-icons/io5";
 import { IoMdAdd } from "react-icons/io";
-import { FiShoppingCart } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/Fi";
 import Link from 'next/link';
 import { FaEdit } from "react-icons/fa";
 const ProductShopPage = () => {
@@ -57,7 +57,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>
@@ -76,7 +76,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>
@@ -95,7 +95,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>
@@ -114,7 +114,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>
@@ -133,7 +133,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>
@@ -152,7 +152,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>
@@ -171,7 +171,7 @@ const ProductShopPage = () => {
                                         <p>Price: <span>24</span> BDT</p>
                                     </div>
                                     <div className="product-shop-btn custom-btn-alt">
-                                        <button><span><FaEdit /></span> Update to Cart</button>
+                                        <button><span><FaEdit /></span> Update Cart</button>
                                     </div>
                                    </div>
                                 </div>

@@ -340,7 +340,7 @@ ul.qe-ul li {
   font-weight: 700;
 }
 .order-sale-item-con {
-  padding: 10px 15px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -548,6 +548,10 @@ height: 60px;
 .delivery-charge-list-btn{
   width: fit-content;
   margin-top: 10px;
+}
+.dashboard-content-wrapper .form-input-item span{
+  color: var(--second-color);
+  opacity: 0.6;
 }
 
 /* ============== Product Shop ======== */
