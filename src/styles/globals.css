@@ -5,12 +5,11 @@
   outline: none;
 }
 
-
 /*===== VARIABLES CSS =====*/
 
 :root {
   /*========== Colors ==========*/
-  --color:#7922e6;
+  --color: #7922e6;
   --main-color: linear-gradient(90deg, #7922e6 6.15%, #9d32fa 99.99%);
   --second-color: #061237;
   --black-color: #000000;
@@ -100,9 +99,9 @@ ol {
   padding: 0;
   list-style: none;
 }
-button{
-  border:none;
-  background:none;
+button {
+  border: none;
+  background: none;
 }
 button:focus {
   outline: none;
@@ -129,8 +128,8 @@ span,
 label {
   margin: 0;
 }
-p{
-  margin-bottom: 0!important;
+p {
+  margin-bottom: 0 !important;
 }
 
 .ovh {
@@ -186,7 +185,7 @@ table.table {
   position: relative;
   z-index: 1;
 }
-.custom-btn-alt{
+.custom-btn-alt {
   display: inline-block;
   background: var(--main-color);
   border-radius: 7px;
@@ -203,10 +202,10 @@ table.table {
   cursor: pointer;
   border: none;
 }
-.custom-btn-alt span{
+.custom-btn-alt span {
   font-size: 19px;
 }
-.denger-btn{
+.denger-btn {
   background: rgb(179, 3, 3);
 }
 /* ===============custom button alt=============== */
@@ -240,12 +239,12 @@ h2.sec-title {
   font-weight: 900;
   margin-bottom: 30px;
 }
-.section-title h4{
-    background: linear-gradient(90deg, #36BEFF 0%, #6E58EB 106.85%);
-    font-weight: 700;
-    font-size: 20px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
+.section-title h4 {
+  background: linear-gradient(90deg, #36beff 0%, #6e58eb 106.85%);
+  font-weight: 700;
+  font-size: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h2.sec-title span {
   background: linear-gradient(90deg, #a43ef2 16.72%, #7319e2 52.82%);
@@ -268,7 +267,7 @@ h2.sec-title:before {
 }
 
 .MuiSlider-root {
-  color:#831be4!important;
+  color: #831be4 !important;
   height: 12px !important;
 }
 /* slider nav */
@@ -446,29 +445,29 @@ h2.sec-title:before {
 }
 
 /*  =============== Privacy-policy ======== */
-.terms{
+.terms {
   position: relative;
   padding-top: 50px;
 }
 .terms-conditions {
   padding: 100px 0;
 }
-.yellow_filter{
+.yellow_filter {
   width: 345.517px;
   height: 345.517px;
   border-radius: 345.517px;
-  background: #CCEA54;
+  background: #ccea54;
   filter: blur(232px);
   position: absolute;
   left: -200px;
   top: 100px;
   z-index: -1;
 }
-.green_filter{
+.green_filter {
   width: 345.517px;
   height: 345.517px;
   border-radius: 345.517px;
-  background: #58EB81;
+  background: #58eb81;
   filter: blur(232px);
   position: absolute;
   right: -200px;
@@ -484,8 +483,8 @@ h2.pp-title {
   font-size: 16px;
   color: #14161b;
 }
-.urbanist-black-16 a{
- color: #7319e2;
+.urbanist-black-16 a {
+  color: #7319e2;
 }
 h3.pp-sm-title {
   margin-bottom: 15px;
@@ -497,21 +496,19 @@ h3.pp-sm-title {
   padding-bottom: 50px !important;
 }
 @media only screen and (max-width: 992px) {
-  .green_filter{
+  .green_filter {
     display: none;
   }
-  .yellow_filter{
+  .yellow_filter {
     display: none;
   }
-
 }
 @media only screen and (max-width: 768px) {
   .terms-conditions {
     padding: 50px 5px;
   }
-  
 }
-/* =============padding margin class============= */
+/* =============padding margin className============= */
 
 .me-3 {
   margin-right: 30px;

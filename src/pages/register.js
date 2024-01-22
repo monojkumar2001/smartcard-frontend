@@ -38,11 +38,8 @@ const Register = () => {
         console.log("Redirecting to email verification page");
 
         const email = encodeURIComponent(formData.email); // Encode the email for URL
-        const verificationCode = encodeURIComponent(
-          response.data.verification_code
-        );
 
-        router.push(`/verify-email?email=${email}&code=${verificationCode}`);
+        router.push(`/verify-email?email=${email}`);
       }
     } catch (error) {
       console.error("Registration failed", error);

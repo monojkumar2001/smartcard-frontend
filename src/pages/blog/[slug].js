@@ -19,7 +19,7 @@ import Image from "next/image";
 
 export async function getStaticPaths() {
   const response = await axios.get("https://softwareprodigies.com/api/post");
-console.log('data:',response)
+  console.log("data:", response);
   return {
     fallback: true,
     paths: response.data.map((post) => ({
@@ -58,7 +58,7 @@ export default function BlogDetails({ blog }) {
         width="80"
         ariaLabel="blocks-loading"
         wrapperStyle={{}}
-        wrapperClass="blocks-wrapper"
+        wrapperclassName="blocks-wrapper"
       />
     );
   }
