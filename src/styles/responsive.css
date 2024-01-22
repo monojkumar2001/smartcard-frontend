@@ -1,5 +1,19 @@
 
-
+@media screen and (max-width: 1240px) {
+.dasboard-menu {
+    display: block;
+    padding-left: 20px;
+}
+.dasboard_header_menu{
+  justify-content: space-between;
+}
+.left-sidebar{
+  display: none;
+}
+.left-sidebar.active{
+display: block;
+}
+}
 @media screen and (max-width: 1200px) {
     .qr-sidebar-left {
       position: relative;
