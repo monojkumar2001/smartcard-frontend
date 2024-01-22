@@ -8,10 +8,29 @@
   justify-content: space-between;
 }
 .left-sidebar{
-  display: none;
+  transition: 0.5s;
+margin-left: -100%;
 }
 .left-sidebar.active{
-display: block;
+z-index: 1111;
+margin-left: 0%;
+}
+
+.dashboard-header {
+    position: relative;
+    padding-left: 0px;
+}
+.dashboard-content {
+    padding-left: 0px;
+}
+.dashboad-close-menu{
+  display: flex;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
 }
 }
 @media screen and (max-width: 1200px) {

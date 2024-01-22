@@ -3,7 +3,6 @@ import DashboardLayout from '../../components/Layout/DashboardLayout'
 import UpdateShopInfoForm from '../../components/Dashboard/UpdateShopInfoForm';
 import ShopSettingsForm from '../../components/Dashboard/ShopSettingsForm';
 import ShopQR from '../../components/Dashboard/ShopQR';
-import { AiOutlineUpload } from "react-icons/ai";
 import DeliveryChargesFrom from '../../components/Dashboard/DeliveryChargesFrom';
 import SocialLink from '../../components/Dashboard/SocialLink';
 import ShopLogo from '../../components/Dashboard/ShopLogo';

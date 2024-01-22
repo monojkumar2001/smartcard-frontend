@@ -1,5 +1,15 @@
 /* ============== Dashboard Layout ===================== */
-
+.dashboad-close-menu{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: none;
+}
+.dashboad-close-menu span{
+  font-size: 20px;
+  color:var(--second-color);
+  background: var(--white-color);
+}
 
 .left-sidebar {
   background: #851dd7;

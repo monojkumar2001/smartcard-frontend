@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MdOutlineInventory2 } from "react-icons/md";
-import { MdDashboard } from "react-icons/md";
 import { CiShop } from "react-icons/ci";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineCategory } from "react-icons/md";
@@ -10,14 +9,20 @@ import { AiOutlineUnorderedList } from "react-icons/ai";
 import { TbReportSearch } from "react-icons/tb";
 import { TbUsers } from "react-icons/tb";
 import { MdOutlineSubscriptions } from "react-icons/md";
+import { IoCloseSharp } from "react-icons/io5";
 const Sidebar = ({ toggleSidebar }) => {
   const router = useRouter();
   const isActive = (path) => router.pathname.startsWith(path);
   return (
     <>
-      <div className={"sidebar-wrapper"}>
+      <div className="sidebar-wrapper">
         <div className="dashboad-logo">
           <img src="/assets/images/dashboard/logo.svg" alt="" />
+        </div>
+        <div className="dashboad-close-menu" onClick={() => toggleSidebar()}>
+          <span>
+            <IoCloseSharp />{" "}
+          </span>
         </div>
 
         <div className="sidebar-menu">
