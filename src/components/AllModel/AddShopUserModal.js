@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { IoMdPersonAdd } from 'react-icons/io';
-import LayoutModal from './LayoutModal';
+import React, { useState } from "react";
+import { IoMdPersonAdd } from "react-icons/io";
+import LayoutModal from "./LayoutModal";
 
 const AddShopUserModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +15,9 @@ const AddShopUserModal = () => {
   return (
     <>
       <div onClick={openModal} className="custom-btn-alt">
-        <span><IoMdPersonAdd /> </span>
+        <span>
+          <IoMdPersonAdd />{" "}
+        </span>
         Add User
       </div>
       <LayoutModal isOpen={isModalOpen} onClose={closeModal}>
@@ -35,11 +37,13 @@ const AddShopUserModal = () => {
               </div>
               <div className="col-md-5">
                 <div className="form-input-item">
-                  <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                  <select
+                    className="form-select form-select-lg"
+                    aria-label=".form-select-lg example"
+                  >
                     <option selected>Select Role</option>
                     <option value="1">Shop Manager</option>
                     <option value="2">Shop Staff</option>
-
                   </select>
                 </div>
               </div>
@@ -54,7 +58,7 @@ const AddShopUserModal = () => {
         </div>
       </LayoutModal>
     </>
-  )
-}
+  );
+};
 
-export default AddShopUserModal
+export default AddShopUserModal;
