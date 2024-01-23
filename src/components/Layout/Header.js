@@ -38,7 +38,7 @@ function Header() {
                 {router.pathname == "/blog/[slug]" ? (
                   <div className="logo">
                     <Link href={"/"}>
-                      <span>                       
+                      <span>
                         <Image
                           src="/assets/img/logo/logo.svg"
                           width={192}
@@ -51,7 +51,7 @@ function Header() {
                 ) : (
                   <div className="logo">
                     <Link href={"/"}>
-                      <span>                      
+                      <span>
                         <Image
                           src="/assets/img/logo/logo.svg"
                           width={192}
@@ -103,7 +103,7 @@ function Header() {
 
                     <Navlink
                       href="/blog"
-                      text="Blog"                     
+                      text="Blog"
                       _toggleSidebar={_toggleSidebar}
                     />
 
@@ -117,16 +117,16 @@ function Header() {
                       className="nav-list  let-talk-btn"
                       onClick={_toggleSidebar}
                     >
-                      <button
-                        className="nav-link login-btn pop-hover"
-                      >
-                        Login
-                      </button>
-                      <button
-                        className="nav-link login-btn pop-hover"
-                      >
-                        Sign up
-                      </button>
+                      <Link href={"/login"}>
+                        <button className="nav-link login-btn pop-hover">
+                          Login
+                        </button>
+                      </Link>
+                      <Link href={"/register"}>
+                        <button className="nav-link login-btn pop-hover">
+                          Sign up
+                        </button>
+                      </Link>
                     </li>
                   </ul>
                 </div>

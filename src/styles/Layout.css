@@ -116,8 +116,8 @@ ul.nav-menu {
 .nav-link.login-btn {
   background: linear-gradient(90deg, #7922e6 6.15%, #9d32fa 99.99%);
   color: var(--white-color);
-  padding: 10px 20px;
-  border-radius: 23px;
+  padding: 6px 30px;
+  border-radius: 30px;
   transition: 0.3s;
   display: flex;
   align-items: center;

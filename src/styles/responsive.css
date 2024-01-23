@@ -130,5 +130,17 @@ margin-left: 0%;
   grid-gap: 20px;
   gap: 20px;
 }
+.login-wrapper {
+    padding: 20px 0;
+}
+.login-wrapper-forget{
+  padding: 0;
+}
+.login-content h1 {
+    font-size: 25px;
+}
+.login-wrapper-forget h1 {
+    font-size: 22px;
+}
   }
   

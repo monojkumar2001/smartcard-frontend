@@ -1087,3 +1087,102 @@ padding: 15px;
 .cmt-8{
   margin-top: 70px;
 }
+
+
+/* ===================== Login and Sign up Page ================== */
+.login-page{
+  margin-top: 50px;
+}
+.login-wrapper{
+  max-width: 500px;
+  padding: 20px;
+}
+.login-content{
+  margin: auto;
+  max-width:450px;
+  margin: auto;
+  text-align: center;
+  padding: 35px 25px;
+   background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+}
+.login-content h1{
+  font-size: 30px;
+  line-height: 140%;
+  text-align: center;
+  font-weight: 700;
+}
+.login-header{
+ width: 100%;
+   gap: 10px;
+}
+.login-list-item{
+  width: 100%;
+  padding: 10px 20px;
+  color:var(--white-color);
+  background-color: var(--main-color);
+  transition: 0.4s;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+.login-list-item button{
+font-size: 20px;
+font-weight: 600
+}
+.login-list-item.active{
+  width: 100%;
+  padding: 10px 20px;
+  color:var(--white-color);
+  border: 1px solid #e5e7eb;
+  background: var(--main-color);
+}
+.login-list-item.active button{
+  color:var(--white-color);
+}
+
+.input-fulid-item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  align-items: flex-start;
+}
+.input-fulid-item input {
+  padding: 7px 20px;
+  border-radius: 4px;
+  width: 100% ;
+  border: 1px solid #e5e7eb;
+}
+.input-fulid-item-checkbox{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: start;
+  gap: 15px;
+}
+.input-fulid-item-checkbox label{
+  line-height: 150%;
+  font-size: 15px;
+}
+.input-fulid-item-checkbox a{
+  color: var(--color);
+}
+.login-content .logo-img img{
+  width: 120px;
+}
+.input-fulid-item input:focus {
+  box-shadow: 0 0 0 1px var(--color);
+}
+.login-dis-text span a{
+  color: var(--color);
+}
+.login-wrapper-forget{
+  padding: 0 20px ;
+}
+.login-wrapper-forget h1{
+font-size: 25px;
+margin-bottom: 10px;
+}
