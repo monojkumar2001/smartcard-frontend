@@ -129,6 +129,11 @@ const Login = () => {
                   .
                 </label>
               </div>
+              <div className="input-fulid-item-checkbox">
+                <Link href={'/forgot-password'}>
+                  Forgot Password Account
+                </Link>
+              </div>
               <button
                 type="button"
                 onClick={handleLogin}
