@@ -23,12 +23,12 @@ const VerifyEmail = () => {
     try {
       const response = await axios.post(`${apiUrl}/api/auth/verify`, formData);
       setMessage(response.data.message);
-      if (response.data.message.includes("Registration successful")) {
+      router.push(`/login`);
+      if (response.data.message.includes("Email Verify successful")) {
         router.push(`/login`);
       }
     } catch (error) {
-      console.error("Registration failed", error);
-      setMessage("Registration failed. Please try again.");
+      setMessage("Email Verify failed. Please try again.");
     }
   };
 
@@ -42,7 +42,6 @@ const VerifyEmail = () => {
             </div>
             <h1>Verify Your Email Account</h1>
             {formData.email}
-            {formData.verification_code}
             <div className="login-wrapper">
               <div className="input-fulid-item">
                 <label>Verification Code</label>

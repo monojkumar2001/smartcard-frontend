@@ -17,13 +17,11 @@ const Register = () => {
     password: "",
   });
 
-  const [message, setMessage] = useState(""); // Initialize message state
+  const [message, setMessage] = useState("");
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  //   console.log("API URL:", apiUrl);
 
   const handleRegister = async () => {
     try {
@@ -37,15 +35,11 @@ const Register = () => {
           password: "",
         });
 
-        // Add a log to check if this point is reached
-        console.log("Redirecting to email verification page");
-
-        const email = encodeURIComponent(formData.email); // Encode the email for URL
+        const email = encodeURIComponent(formData.email);
 
         router.push(`/verify-email?email=${email}`);
       }
     } catch (error) {
-      console.error("Registration failed", error);
       setMessage("Registration failed. Please try again.");
     }
   };

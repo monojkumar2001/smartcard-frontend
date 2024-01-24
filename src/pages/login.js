@@ -26,7 +26,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading state to true during login attempt
+    setLoading(true);
 
     try {
       const response = await axios.post("http://localhost:8000/api/login", {
@@ -36,15 +36,14 @@ const Login = () => {
       const { user, token } = response.data;
       login(token);
 
-      // Set the cookie after successful login
-      setCookie("token", token, 1); // Expires in 1 day
+      setCookie("token", token, 1);
 
       router.push("/dashboard");
     } catch (error) {
       setError("Invalid email or password");
       console.error("Login failed", error);
     } finally {
-      setLoading(false); // Reset loading state after login attempt
+      setLoading(false);
     }
   };
 
