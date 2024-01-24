@@ -1,9 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import "../styles/Layout.css";
 // import "../styles/style.css";
-import '../styles/dashboard.css';
-
+import "../styles/dashboard.css";
+import { AuthProvider } from "./auth/authContext";
 
 // import Social from "../components/inner/Social";
 
@@ -12,9 +12,8 @@ import "aos/dist/aos.css";
 import "../styles/inner/popup.css";
 import { useEffect } from "react";
 import OfferC from "../components/inner/OfferC";
-import '../styles/responsive.css';
+import "../styles/responsive.css";
 // import '../styles/bootstrap.bundle.min.js';
-
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -28,20 +27,18 @@ function MyApp({ Component, pageProps }) {
       offset: 50,
     });
   }, []);
-  const Layout = Component.layout ;
+  const Layout = Component.layout;
 
   return (
     <>
       <Layout>
-
         {/* <OfferC /> */}
-
-        <Component {...pageProps} />
+        <AuthProvider>
+          <Component {...pageProps} />
+        </AuthProvider>
 
         {/* <Social /> */}
       </Layout>
-    
-   
     </>
   );
 }

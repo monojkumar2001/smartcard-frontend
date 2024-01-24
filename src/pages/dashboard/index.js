@@ -8,12 +8,9 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import QRCode from "qrcode.react";
 import { FaRegCopy } from "react-icons/fa";
 import ChartMap from "../../components/Dashboard/ChartMap";
-
+import { useAuth } from "../auth/authContext";
 //auth
-import { useAuth } from "../../hooks/auth";
 const DashboardPage = () => {
-  const { user } = useAuth({ middleware: "auth" });
-
   const [createQrModel, setCreateQrModel] = useState(false);
 
   const handleQrModel = () => {
@@ -38,16 +35,22 @@ const DashboardPage = () => {
     }
   };
 
+  const { user, isLoading } = useAuth();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!user) {
+    return <div>Not authenticated. Redirecting...</div>;
+  }
+
   return (
     <>
       <div className="dashboard-content-wrapper">
         <div className="busines-name-welcome">
           <p>Fri 19, Jan 2024</p>
-          {user && (
-            <h3>
-              Hello, <span>{user.name}</span>
-            </h3>
-          )}
+          <p>Welcome, {user.name}!</p>
         </div>
         <div className="row mt-4">
           <div className="col-md-4">

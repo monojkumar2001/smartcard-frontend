@@ -3,55 +3,48 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import AppLayout from "../components/Layout/Layout";
 import Link from "next/link";
-
+import { useAuth } from "./auth/authContext";
 const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+const setCookie = (name, value, days) => {
+  const expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + days);
+
+  const cookieValue = `${name}=${value}; expires=${expirationDate.toUTCString()}; path=/`;
+
+  document.cookie = cookieValue;
+};
 
 const Login = () => {
-    const router = useRouter();
-    const currentPathname = router.pathname;
-
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const router = useRouter();
+  const { login } = useAuth();
+  const currentPathname = router.pathname;
+  const [message, setMessage] = useState("");
 
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true); // Set loading state to true during login attempt
 
-  const handleLogin = async () => {
     try {
-      setLoading(true);
+      const response = await axios.post("http://localhost:8000/api/login", {
+        email,
+        password,
+      });
+      const { user, token } = response.data;
+      login(token);
 
-      const response = await axios.post(`${apiUrl}/api/login`, formData);
+      // Set the cookie after successful login
+      setCookie("token", token, 1); // Expires in 1 day
 
-      // Assuming your server returns a token upon successful login
-      const { token } = response.data;
-
-      // Save the token to localStorage or a state management solution
-      localStorage.setItem("token", token);
-      console.log("user login success!");
-      // Redirect the user to the dashboard or any protected route
       router.push("/dashboard");
     } catch (error) {
+      setError("Invalid email or password");
       console.error("Login failed", error);
-
-      // Check if the error message indicates unverified account
-      if (
-        error.response &&
-        error.response.data.error === "Account not verified"
-      ) {
-        setMessage(
-          "Account not verified. Please check your email for verification."
-        );
-      } else {
-        setMessage("Invalid credentials. Please try again.");
-      }
     } finally {
-      setLoading(false);
+      setLoading(false); // Reset loading state after login attempt
     }
   };
 
@@ -65,7 +58,7 @@ const Login = () => {
             </div>
             <h1>Log into your account</h1>
             <p className="login-dis-text">
-              Don’t have an account? {' '}
+              Don’t have an account?{" "}
               <span>
                 <Link href={"/register"}> Sign Up</Link>
               </span>
@@ -98,7 +91,8 @@ const Login = () => {
                   name="email"
                   placeholder="Enter Your Email"
                   required
-                  onChange={handleInputChange}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="input-fulid-item">
@@ -106,7 +100,8 @@ const Login = () => {
                 <input
                   type="password"
                   name="password"
-                  onChange={handleInputChange}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter Your Password"
                   required
                 />
@@ -130,9 +125,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="input-fulid-item-checkbox">
-                <Link href={'/forgot-password'}>
-                  Forgot Password Account
-                </Link>
+                <Link href={"/forgot-password"}>Forgot Password Account</Link>
               </div>
               <button
                 type="button"
