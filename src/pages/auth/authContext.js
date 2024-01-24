@@ -1,5 +1,3 @@
-// utils/authContext.js
-
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";

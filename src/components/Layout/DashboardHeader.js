@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import React, { useState } from 'react'
+import Link from "next/link";
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 import { RiLogoutCircleLine } from "react-icons/ri";
@@ -21,7 +21,7 @@ const DashboardHeader = ({ toggleSidebar }) => {
             className="dashboard-profile-username"
             onClick={() => handleProfle()}
           >
-            <p>monoj</p>
+            <p>Helal Uddin</p>
           </div>
           {profile && (
             <div className="user-profile-content">
@@ -57,4 +57,4 @@ const DashboardHeader = ({ toggleSidebar }) => {
   );
 };
 
-export default DashboardHeader
+export default DashboardHeader;
