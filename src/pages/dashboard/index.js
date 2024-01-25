@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MdDateRange } from "react-icons/md";
 import { FaMoneyBillWave } from "react-icons/fa6";
 import { FiUsers } from "react-icons/Fi";
+import CurrentDateTime from "../components/DateTime";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import QRCode from "qrcode.react";
 import { FaRegCopy } from "react-icons/fa";
@@ -45,11 +46,12 @@ const DashboardPage = () => {
     return <div>Not authenticated. Redirecting...</div>;
   }
 
+
   return (
     <>
       <div className="dashboard-content-wrapper">
         <div className="busines-name-welcome">
-          <p>Fri 19, Jan 2024</p>
+          <p><CurrentDateTime /> </p>
           <p>Welcome, {user.name}!</p>
         </div>
         <div className="row mt-4">
