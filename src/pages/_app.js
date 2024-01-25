@@ -31,14 +31,16 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Layout>
-        {/* <OfferC /> */}
-        <AuthProvider>
-          <Component {...pageProps} />
-        </AuthProvider>
+      <AuthProvider>
+        <Layout>
+          {/* <OfferC /> */}
 
-        {/* <Social /> */}
-      </Layout>
+          <Component {...pageProps} />
+
+
+          {/* <Social /> */}
+        </Layout>
+      </AuthProvider>
     </>
   );
 }
